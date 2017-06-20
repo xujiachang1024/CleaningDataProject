@@ -8,7 +8,7 @@ Course Project for Getting and Cleaning Data, part of Data Science Specializatio
  * Cleaning Data Analysis Report is run_analysis.pdf
  
 ### Step-by-Step Analysis (run_analysis.Rmd)
- * Downloading raw data to the **data** folder
+ * <a href = "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip">Downloading raw data</a> to the **data** folder
  * Loading subject data (test + train)
  * Loading features data (test + train)
  * Loading activity data (test + train)
