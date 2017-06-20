@@ -85,7 +85,17 @@ names(finaldata) <- gsub("^t", "time", names(finaldata))
 names(finaldata) <- gsub("^f", "frequency", names(finaldata))
 ```
 
-```{r }
+```{r extracting means and standard deviation}
+## extracting means and standard deviation
+suppressWarnings(
+    cleandata <- aggregate(finaldata, by = list(finaldata$subject, finaldata$activity), FUN = mean)
+)
+colnames(cleandata)[1] <- "Subject"
+names(cleandata)[2] <- "Activity"
+```
+
+```{r writing to text file}
+head(cleandata)
 ## writing clean data to text file
-write.table(finaldata, file = "cleandata.txt", row.name = FALSE)
+write.table(cleandata, file = "cleandata.txt", row.name = FALSE)
 ```
